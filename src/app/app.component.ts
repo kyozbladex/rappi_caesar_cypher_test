@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
               <plaintext
 
               ></plaintext>
-              <ciphertext
+              <ciphertext 
 
               ></ciphertext>
             </div>

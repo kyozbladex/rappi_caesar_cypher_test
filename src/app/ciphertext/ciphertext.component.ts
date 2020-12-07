@@ -25,6 +25,7 @@ export class CiphertextComponent {
                   this.shift = numeroShifter
                 }
               );
+
    }
 
   convertToPlaintext(newCiphertext) {
@@ -41,7 +42,13 @@ export class CiphertextComponent {
     
     let newString = [];
 
+   // newString = text.split('');
+
+   // console.log(newString);
+
     shifter = shifter % 26;
+
+   // console.log(shifter);
 
     for (let i = 0; i < text.length; i++) {
 
@@ -73,5 +80,7 @@ export class CiphertextComponent {
     return newString.join("").trim();
 
   }
+
+  
 
 }
