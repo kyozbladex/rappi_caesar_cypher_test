@@ -5,9 +5,16 @@ import { Component } from '@angular/core';
   template: `
             <shift></shift>
             <div class="inputArea">
-              <plaintext></plaintext>
-              <ciphertext></ciphertext>
+              <plaintext
+
+              ></plaintext>
+              <ciphertext
+
+              ></ciphertext>
             </div>
             `
 })
-export class AppComponent { }
+export class AppComponent {
+
+
+ }
