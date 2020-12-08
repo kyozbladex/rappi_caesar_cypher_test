@@ -7,9 +7,9 @@
       <div class="content">
         <textarea 
           placeholder="Enter ciphertext" 
-          [ngModel]="ciphertext"
+          [ngModel]="getPlainDisplayText(cipherDisplayText, shift)"
           (ngModelChange)="convertToPlaintext($event)"
-          (ngModelChange)="getPlainDisplayText($event)"
+          (ngModelChange)="getPlainDisplayText(cipherDisplayText, shift)"
         >
        
       </textarea>

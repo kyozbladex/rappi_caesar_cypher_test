@@ -11,7 +11,11 @@ export class ShiftValueService {
   textoAdecifrar = new EventEmitter<string>();
   numeroShift = new EventEmitter<number>();
 
-  constructor() {}
+  //textoCifrar: string;
+
+  constructor() {
+    
+  }
 
  // changeShiftValue(shift: string) {
   changeShiftValue(shift: number) {
@@ -27,4 +31,49 @@ export class ShiftValueService {
         }
     };
   }
+
+  /* cifrando(textoAcifrar, numeroShift){
+    console.log(textoAcifrar);
+    
+    let newString = [];
+
+   // newString = text.split('');
+
+   // console.log(newString);
+
+   numeroShift = numeroShift % 26;
+
+   // console.log(shifter);
+
+    for (let i = 0; i < textoAcifrar.length; i++) {
+
+      let charCode = textoAcifrar[i].charCodeAt();
+      let newCharCode = 0;
+      
+      if (charCode >= 65 && charCode <= 90) {
+        // Only then do a alphabet rotation
+        newCharCode = charCode + numeroShift;
+        if (newCharCode > 90) {
+            newCharCode = (newCharCode - 90) + 64;
+        }
+
+    } else if (charCode >= 97 && charCode <= 122) {
+        // Only then do a alphabet rotation
+        newCharCode = charCode + numeroShift;
+        if (newCharCode > 122) {
+            newCharCode = (newCharCode - 122) + 96;
+        }
+
+    } else {
+        newCharCode = charCode;
+    }
+  
+    newString.push(String.fromCharCode(newCharCode));
+
+    }
+
+    return newString.join("").trim();
+
+  } */
+
 }

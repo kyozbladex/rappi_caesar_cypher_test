@@ -13,7 +13,7 @@ export class ShiftComponent {
   constructor(public service: ShiftValueService) { }
 
   onChange(newShift) {
-    console.log(newShift);
+   // console.log(newShift);
     
     this.shift = newShift;
     this.service.numeroShift.emit(this.shift);

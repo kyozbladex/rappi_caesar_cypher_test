@@ -7,7 +7,7 @@ import { ShiftValueService } from '../shiftvalue.service';
 })
 export class PlaintextComponent {
 
-  plaintext: string;
+  //plaintext: string;
   @Input() plainDisplayText: string = "";
   cipherDisplayText: string = "";
   @Input() numeroShifter: number;
@@ -16,8 +16,8 @@ export class PlaintextComponent {
 
   constructor(public service: ShiftValueService) { 
               this.service.textoAdecifrar.subscribe(
-                (plainDisplayText) => {
-                  this.plaintext=plainDisplayText
+                (plain) => {
+                  this.plainDisplayText=plain
                 }
               );
               this.service.numeroShift.subscribe(

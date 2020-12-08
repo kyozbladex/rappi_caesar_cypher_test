@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ShiftValueService } from '../shiftvalue.service';
 
 @Component({
@@ -7,17 +7,20 @@ import { ShiftValueService } from '../shiftvalue.service';
 })
 export class CiphertextComponent {
 
-  ciphertext: string;
+  //ciphertext: string;
   @Input() cipherDisplayText: string = "";
   plainDisplayText: string = "";
+
   @Input() numeroShifter: number;
   shift: number;
+
+  //cifradito: string;
 
 
   constructor(public service: ShiftValueService) {
               this.service.textoAcifrar.subscribe(
-                (cipherDisplayText) => {
-                  this.ciphertext=cipherDisplayText
+                (cipher) => {
+                  this.cipherDisplayText=cipher
                 }
               );
               this.service.numeroShift.subscribe(
@@ -25,6 +28,8 @@ export class CiphertextComponent {
                   this.shift = numeroShifter
                 }
               );
+
+              //this.cifradito = this.service.cifrando(this.ciphertext, this.numeroShifter);
 
    }
 
@@ -77,7 +82,7 @@ export class CiphertextComponent {
 
   }
 
-  cifrando(text, shifter){
+ /*  cifrando(text, shifter){
     
     let newString = [];
 
@@ -118,7 +123,7 @@ export class CiphertextComponent {
 
     return newString.join("").trim();
 
-  }
+  } */
 
   
 

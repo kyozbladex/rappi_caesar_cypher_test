@@ -7,7 +7,7 @@
       <div class="content">
         <textarea 
           placeholder="Enter plaintext" 
-          [ngModel]="plaintext"
+          [ngModel]="getCipherDisplayText(plainDisplayText, shift)"
           (ngModelChange)="convertToCiphertext($event)"
           (ngModelChange)="getCipherDisplayText($event)"
         
