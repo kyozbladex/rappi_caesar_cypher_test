@@ -7,13 +7,14 @@
       <div class="content">
         <textarea 
           placeholder="Enter ciphertext" 
-          [ngModel]="cifrando(ciphertext,shift)"
+          [ngModel]="ciphertext"
           (ngModelChange)="convertToPlaintext($event)"
           (ngModelChange)="getPlainDisplayText($event)"
         >
        
       </textarea>
       </div>
+      <!-- {{getPlainDisplayText(ciphertext,shift)}} -->
     </article>
   </div>
 </div>
